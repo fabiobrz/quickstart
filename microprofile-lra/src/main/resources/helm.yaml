@@ -1,0 +1,9 @@
+build:
+  uri: https://github.com/fabiobrz/quickstart.git
+  ref: test.WFLY-14869.exp-ismash
+  contextDir: microprofile-lra
+deploy:
+  replicas: 1
+  route:
+    tls:
+      enabled: false
