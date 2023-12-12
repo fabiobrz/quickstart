@@ -12,6 +12,7 @@
         <relativePath/>
     </parent>
 
+    <!-- TODO - Remove this comment, it's used to trigger CI checks on OpenShift -->
     <artifactId>microprofile-lra</artifactId>
     <version>31.0.0.Beta1-SNAPSHOT</version>
     <packaging>war</packaging>
@@ -19,7 +20,7 @@
 
     <properties>
         <!-- the version for the Server -->
-        <version.server>30.0.0.Final</version.server>
+        <version.server>30.0.1.Final</version.server>
         <!-- The versions for the BOMs, Packs and Plugins -->
         <version.bom.ee>${version.server}</version.bom.ee>
         <version.bom.microprofile>${version.server}</version.bom.microprofile>
@@ -138,6 +139,24 @@
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jackson2-provider</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.intersmash</groupId>
+            <artifactId>intersmash-tools-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.intersmash</groupId>
+            <artifactId>intersmash-tools-provisioners</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.intersmash</groupId>
+            <artifactId>intersmash-deployments-provider</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
